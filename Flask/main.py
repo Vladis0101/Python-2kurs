@@ -244,6 +244,13 @@ def city_weather(city):
         return render_template('weather_error.html',
                                error=f"Ошибка при получении погоды: {str(e)}"), 500
 
+
+
+@app.route("/header_main_floor/")
+def header_main_floor():
+    return render_template("header_main_floor.html")
+
+
 @app.errorhandler(404)
 def page_not_found(error):
     return render_template('404.html'), 404
